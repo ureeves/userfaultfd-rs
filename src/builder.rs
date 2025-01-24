@@ -45,7 +45,7 @@ cfg_if::cfg_if! {
 /// A builder for initializing `Uffd` objects.
 ///
 /// ```
-/// use userfaultfd::UffdBuilder;
+/// use ureeves_userfaultfd::UffdBuilder;
 ///
 /// let uffd = UffdBuilder::new()
 ///     .close_on_exec(true)

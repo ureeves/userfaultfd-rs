@@ -4,7 +4,7 @@ use nix::poll::{poll, PollFd, PollFlags};
 use nix::sys::mman::{mmap, MapFlags, ProtFlags};
 use nix::unistd::{sysconf, SysconfVar};
 use std::{convert::TryInto, env};
-use userfaultfd::{Event, Uffd, UffdBuilder};
+use ureeves_userfaultfd::{Event, Uffd, UffdBuilder};
 
 fn fault_handler_thread(uffd: Uffd) {
     let page_size = sysconf(SysconfVar::PAGE_SIZE).unwrap().unwrap() as usize;

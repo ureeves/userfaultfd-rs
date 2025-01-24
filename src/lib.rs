@@ -283,7 +283,7 @@ impl Uffd {
     /// # Examples
     ///
     /// ```rust
-    /// # use userfaultfd::{Uffd, Result};
+    /// # use ureeves_userfaultfd::{Uffd, Result};
     /// fn read_event(uffd: &Uffd) -> Result<()> {
     ///     // Read a single event
     ///     match uffd.read_event()? {
@@ -316,8 +316,8 @@ impl Uffd {
     /// # Examples
     ///
     /// ```rust
-    /// # use userfaultfd::{Uffd, EventBuffer};
-    /// fn read_events(uffd: &Uffd) -> userfaultfd::Result<()> {
+    /// # use ureeves_userfaultfd::{Uffd, EventBuffer};
+    /// fn read_events(uffd: &Uffd) -> ureeves_userfaultfd::Result<()> {
     ///     // Read up to 100 events at a time
     ///     let mut buf = EventBuffer::new(100);
     ///     for event in uffd.read_events(&mut buf)? {

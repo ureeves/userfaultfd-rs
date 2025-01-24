@@ -1,5 +1,5 @@
 [package]
-name = "userfaultfd"
+name = "ureeves-userfaultfd"
 version = "0.8.1"
 authors = ["The Wasmtime Project Developers"]
 edition = "2018"
@@ -14,7 +14,12 @@ cfg-if = "^1.0.0"
 libc = "0.2.65"
 nix = { version = "0.27", features = ["ioctl"] }
 thiserror = "1.0.4"
-userfaultfd-sys = { path = "userfaultfd-sys", version = "^0.5.0", default-features = false }
+
+[dependencies.userfaultfd-sys]
+path = "userfaultfd-sys"
+package = "ureeves-userfaultfd-sys"
+version = "^0.5.0"
+default-features = false
 
 [dev-dependencies]
 nix = { version = "0.27", features = ["poll", "mman", "feature"] }
